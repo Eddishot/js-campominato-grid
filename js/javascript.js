@@ -81,4 +81,5 @@ function generateGrid(numCell){
 
 function clickCell(){
     this.classList.toggle("active")
+    
 }

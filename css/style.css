@@ -64,7 +64,7 @@ main{
 }
 
 .active{
-    background-color: burlywood;
+    background-color: rgb(0, 4, 224);
     color: white;
     cursor: pointer;
 
