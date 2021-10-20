@@ -2,7 +2,7 @@
 
 // recupero gli elementi dove mettere le celle, e gli elementi button e la selezione della difficoltà
 
-const container = document.querySelector(".conatiner");
+const container = document.querySelector(".container");
 const selectDifficulty = document.getElementById("select-difficulty");
 const buttonPlay = document.getElementById("btn");
 
@@ -17,7 +17,7 @@ selectDifficulty.addEventListener("click", function(){
     const numberOfCells = getNumberOfcells(level)
 
     // 
-    generategrid(numberOfCells)
+    generateGrid(numberOfCells)
 
 });
 
@@ -46,3 +46,39 @@ function getNumberOfcells(level){
 
 }
 
+
+// creo la funzione per generare le celle
+
+function generateGrid(numCell){
+
+    // contenuto del container
+    container.innerHTML = "";
+
+//  numero di celle per row
+    const cellRow = Math.sqrt(numCell);
+//   dimensione delle celle
+    const sizeRow = 100 / cellRow;
+
+
+    console.log(numCell)
+
+
+    // creo un ciclo per le celle 
+    for (let i = 0; i < numCell; i++){
+
+        const cell = document.createElement("div")
+
+        cell.classList.add("square")
+        cell.style.width = sizeRow + "%"
+        cell.style.height = sizeRow  + "%"
+        cell.innerHTML = [i + 1]
+        cell.addEventListener("click", clickCell)
+        container.append(cell)
+    }
+
+}
+
+
+function clickCell(){
+    this.classList.toggle("active")
+}
