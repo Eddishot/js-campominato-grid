@@ -11,10 +11,10 @@ body{
 
 .nav-bar{
     display: flex;
-    margin: auto;
+    height: 10vh;
     background-color: white;
     justify-content: space-between;
-    width: 80%;
+    
 
 }
     
@@ -24,19 +24,32 @@ body{
     padding: 10px;
 }
 
+
+#btn, #select-difficulty{
+    cursor: pointer;
+}
+
 #btn:hover{
     color: white;
-    background-color: tomato;
+    background-color: lightskyblue;
+}
+main{
+    background-color: aquamarine;
+    display: flex;
+    height:80vh;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 
 .container{
     background-color: aquamarine;
 
-    width: 1000px;
-    height: 700px;
+    width: 500px;
+    height: 500px;
     margin: auto;
-    padding-top: 50px;
+    
     display: flex;
     flex-wrap: wrap;
     box-shadow: violet;
@@ -47,12 +60,22 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid blue;
+    border: 1px solid black;
 }
 
 .active{
     background-color: burlywood;
     color: white;
+    cursor: pointer;
 
+}
+
+
+
+footer{
+    height: 10vh;
+    background-color: white;
+    font-weight: 700;
+    padding: 15px;
 }
 
